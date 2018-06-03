@@ -17,6 +17,7 @@ class CreateSalesTable extends Migration
             $table->increments('id');
 
             $table->date('date');
+            $table->decimal('cost_total', 10, 2);
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('client_id')->unsigned();

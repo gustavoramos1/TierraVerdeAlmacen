@@ -57,16 +57,16 @@
                     <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="">Inicio <span class="sr-only">(current)</span></a>
                    </li>
            
 
                    <div class="dropdown pointer">
                         <a class="nav-link dropdown-toggle"  data-toggle="dropdown"> Personas </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/usuarios">Usuarios</a></li>
-                            <li><a href="/provedores">Proveedores</a></li>
-                            <li><a href="/clientes">Clientes</a></li>
+                            <li><a href="/register">Usuarios</a></li>
+                            <li><a href="{{route('provider.index')}}">Proveedores</a></li>
+                            <li><a href="{{route('client.index')}}">Clientes</a></li>
                         </ul>
                     </div>
                                         

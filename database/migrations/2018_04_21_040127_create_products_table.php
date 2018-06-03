@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('description');
+            $table->integer('cost_unitary');
             $table->integer('type_product_id')->unsigned();
             $table->foreign('type_product_id')->references('id')->on('type_products')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

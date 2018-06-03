@@ -5,16 +5,13 @@
 <div class="container">
 <div class="row justify-content-center">
 
-<p> &nbsp; &nbsp; <a href="{{ route('type_product.index') }}" class="btn btn-sx btn-success"><i class="fa fa-list fa-lg"></i>&nbsp;Tipo de productos</a></p> 
-<p> &nbsp; &nbsp; <a href="{{ route('product.create') }}" class="btn btn-sx btn-success"><i class="fa fa-plus fa-lg"></i>&nbsp;Agregar producto</a></p> 
+<p> &nbsp; &nbsp; <a href="{{ route('type_product.create') }}" class="btn btn-sx btn-success"><i class="fa fa-plus fa-lg"></i>&nbsp;Agregar tipo producto</a></p> 
 
 <table class="table table-bordered table-striped">
 <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Producto</th>
       <th scope="col">Tipo de Producto</th>
-      <th scope="col">Descripción</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>

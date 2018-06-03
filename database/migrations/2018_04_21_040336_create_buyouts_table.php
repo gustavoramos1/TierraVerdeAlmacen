@@ -16,8 +16,8 @@ class CreateBuyoutsTable extends Migration
         Schema::create('buyouts', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-
             $table->date('date');
+            $table->decimal('cost_total', 10, 2);
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('provider_id')->unsigned();

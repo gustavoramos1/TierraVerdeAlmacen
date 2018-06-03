@@ -17,8 +17,7 @@ class CreateBuyoutDetailsTable extends Migration
             $table->increments('id');
 
             $table->integer('amount');
-            $table->decimal('cost_unitary', 8, 2);
-            $table->decimal('cost_total', 8, 2);
+            $table->decimal('cost_buyout', 10, 2);
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('buyout_id')->unsigned();

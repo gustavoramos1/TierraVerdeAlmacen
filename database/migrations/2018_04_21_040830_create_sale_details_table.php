@@ -17,8 +17,7 @@ class CreateSaleDetailsTable extends Migration
             $table->increments('id');
 
             $table->integer('amount');
-            $table->decimal('cost_unitary', 10, 2);
-            $table->decimal('cost_total', 10, 2);
+            $table->decimal('cost_sale', 10, 2);
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('sale_id')->unsigned();

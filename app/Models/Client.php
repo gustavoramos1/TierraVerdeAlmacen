@@ -8,7 +8,7 @@ use TierrasVerdes\Models\Sale;
 class Client extends Model
 {
 protected $fillable = [
-        'id','document','name','phone', 'address', 'email'
+        'id','document','name','phone','sex','birthday', 'address', 'email'
     ];
   public function sales()
     {

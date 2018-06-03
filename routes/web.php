@@ -44,3 +44,7 @@ Route::get('/productos', function () {
     Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/crearventa', function () {
+    return view('buyout_detail.create');
+});
