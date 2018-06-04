@@ -26,10 +26,8 @@
                             <div class="form-group row">
 
                                 {!!form::label('Sexo')  !!}
-                                {!!form::text('sex',null,[
-                                'id'=>'sex',
-                                'class'=>'form-control',
-                                'placeholder'=>'Escriba el sexo hombre o mujer','required'])
+                                {!!Form::select('sex', null, ['id'=>'sex', array('Hombre' => 'Hombre', 'Mujer' => 'Mujer'),
+                                'placeholder'=>'Elija el sexo', 'required'])
                             !!}
                 
                 
@@ -91,7 +89,7 @@
                                {!!form::submit('Guardar',[
                                'name'=>'guardar',
                                'id'=>'guardar',
-                               'content'=>'<span>guardar</span>',
+                               'content'=>'<span>Guardar</span>',
                                'class'=>'btn btn- success btn-sm m-t-10']) !!}
 
                             </div>

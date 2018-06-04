@@ -1,14 +1,11 @@
 @extends('layouts.app')
 
 
-@section('content')
+@section('content') 
 
 <div class="container">
 <div class="row justify-content-center">
 
-  
-<p> &nbsp; &nbsp; <a href="{{route('verpdfclients')}}" class="btn btn-sx btn-success"><i class="fa fa-file-pdf-o fa-lg"></i>&nbsp;Informe en PDF</a></p> 
-<p> &nbsp; &nbsp; <a href="{{route('descargarpdfclients')}}" class="btn btn-sx btn-success"><i class="fa fa-download fa-lg"></i>&nbsp;Descargar PDF</a></p> 
 <p> &nbsp; &nbsp; <a href="{{route('client.create')}}" class="btn btn-sx btn-success"><i class="fa fa-plus fa-lg"></i>&nbsp;Nuevo Registro</a></p> 
 
 <table class="table table-bordered table-striped">

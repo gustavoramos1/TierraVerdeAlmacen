@@ -14,9 +14,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $client=Client::orderBy('id','ASC')->paginate(10);
-        return view(cliente.index)
-        ->with(compact('client'));
+        $clients=Client::all()->sortByDesc('id');
+        return view('client.index')->with(compact('clients'));
+     
     }
 
     /**
@@ -27,7 +27,7 @@ class ClientController extends Controller
     public function create()
     {
         $client=Client::all();
-        return view(cliente.create)
+        return view('client.create')
         ->with(compact('client'));
 
     }
@@ -55,7 +55,7 @@ class ClientController extends Controller
     {
         $client=findOrFail($id);
         return view(client.show)
-        ->with(compact('client'));
+        ->with(compact('client')); 
     }
 
     /**
@@ -64,11 +64,11 @@ class ClientController extends Controller
      * @param  \TierrasVerdes\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client,$id)
+    public function edit($id)
     {
-        $client=findOrFail($id);
-        return view(client.edit)
-        ->with(compact('client'));
+        $clients = Client::FindOrFail($id);
+        return view('client.edit')
+        ->with(compact('clients',$clients));
     }
 
     /**
@@ -78,12 +78,13 @@ class ClientController extends Controller
      * @param  \TierrasVerdes\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client,$id)
+    public function update(Request $request, $id)
     {
-        $client=findOrFail($id);
-        $client=fill($request->all());
-        $client->save();
-        return view(redirect()->route(client.index));
+        $clients = client::FindOrFail($id);
+        $input = $request->all();
+        $clients->fill($input)->save();
+        
+         return redirect()->route('client.index');
     }
 
     /**

@@ -14,7 +14,8 @@ class ProviderController extends Controller
      */
     public function index()
     {
-        //
+        $providers=Provider::all()->orderBy('id','ASC')->get();
+        return view('provider.index')->with(compact('providers'));
     }
 
     /**

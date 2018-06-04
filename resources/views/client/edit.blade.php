@@ -31,10 +31,8 @@
             <div class="form-group row">
 
                 {!!form::label('Sexo')  !!}
-                {!!form::text('sex',null,[
-                'id'=>'sex',
-                'class'=>'form-control',
-                'required'])
+                {!!Form::select('sex',null,[ 'id'=>'sex', array('Hombre' => 'Hombre', 'Mujer' => 'Mujer'),
+                'placeholder'=>'Elija el sexo', 'required'])
             !!}
 
 

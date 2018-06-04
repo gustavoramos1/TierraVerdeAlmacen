@@ -21,5 +21,14 @@
     },
     "dependencies": {
         "font-awesome": "^4.7.0"
-    }
+    },
+    
+
+    "require": {
+    "php": ">=5.5.9",
+    "laravel/framework": "5.1.*",
+    "illuminate/html": "5.*"
+}
+
+
 }

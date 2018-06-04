@@ -15,36 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-Route::get('/ventas', function () {
-    return view('sale.index');
-});
-Route::get('/inventarios', function () {
-    return view('warehouse.index');
-});
-Route::get('/pedidos', function () {
-    return view('buyout.index');
-});
-Route::get('/productos', function () {
-    return view('product.index');
-});
-    Route::prefix('admin')->group(function () {
-        Route::resource('compra','buyoutController');
-        Route::resource('detallecompra','buyoutDetailController');
-        Route::resource('cliente','ClientController');
-        Route::resource('inventario','InventoryController');
-        Route::resource('producto','ProductController');
-        Route::resource('proveedor','ProviderController');
-        Route::resource('venta','SaleController');
-        Route::resource('detalleventa','SaleDetailController');
-        Route::resource('tipoproducto','TypeProductController'); 
-    });
-
-    Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/crearventa', function () {
-    return view('buyout_detail.create');
-});
+Auth::routes();
+    Route::prefix('admin')->group(function () {
+        Route::resource('buyout','buyoutController');
+        Route::resource('buyout_detail','buyoutDetailController');
+        Route::resource('client','ClientController');
+        Route::resource('inventary','InventoryController');
+        Route::resource('product','ProductController');
+        Route::resource('provider','ProviderController');
+        Route::resource('sale','SaleController');
+        Route::resource('sale_detail','SaleDetailController');
+        Route::resource('type_product','TypeProductController'); 
+    });
+
+   
+
+
+
